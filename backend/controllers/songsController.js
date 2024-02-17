@@ -51,15 +51,24 @@ const updateSong = async(req, res) =>{
 
 const addSong = async(req, res) =>{
     let {title, artist, genre, albumName} = req.body
-
+    // let {songFile} = req.body
     try {
         let todo = new SongModel({
            title,
            artist,
            albumName,
            genre
-        })       
+        })    
+        // let todo = new SongModel({
+        //     songFile: {
+        //         filename: 'everything',
+        //         path: '~/Music/gospel/every thing lyrics.mp4'
+        //     }
+        // })
+
+
         let todos = await todo.save()
+
         res.send(todos)
         // console.log(todos)
 

@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 dotenv.config()
 
-app.use(express.json())
+app.use(express.urlencoded())
+// app.use(express.urlencoded())
 app.use("/",router)
 const dbUrl = process.env.dbUrl
 const port = process.env.port

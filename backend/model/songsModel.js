@@ -21,6 +21,18 @@ const songSchema = new Schema({
         type: String,
         required: true
     }
+    // songFile: {
+    //     filename: {
+    //         type: String,
+    //         required: true
+    //     },
+
+    //     path: {
+    //         type: String,
+    //         required: true
+    //     }
+
+    // }
 })
 
 module.exports = mongoose.model("SongModel", songSchema)
